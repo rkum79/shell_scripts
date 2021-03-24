@@ -32,7 +32,7 @@ if [ "${BRANCH_NAME}" = "refs/heads/master" ];
           git config --global user.email "sendmailrajiv@gmail.com"
           git config --global user.name "rkum79"
           git commit -a -m 'AutoCommit remove SNAPSHOT from pom.xml'
-          git push central ${BRANCH_NAME}
+          git push ${BRANCH_NAME}
           ls -ltr
         else
           echo Please update the pom.xml file with SNAPSHOT in the version in ${BRANCH_NAME} Branch
