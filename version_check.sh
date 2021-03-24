@@ -29,8 +29,8 @@ if [ "${BRANCH_NAME}" = "refs/heads/master" ];
         then
           echo This is Merge Commit Updating the pom Version
           sed -i "$LN s/$SVERSION/$versionLabel/" pom.xml
-          git config --global user.email "rajiv_kumar@waters.com"
-          git config --global user.name "conrkuma"
+          git config --global user.email "sendmailrajiv@gmail.com"
+          git config --global user.name "rkum79"
           git commit -a -m 'AutoCommit remove SNAPSHOT from pom.xml'
           git push central ${BRANCH_NAME}
           ls -ltr
