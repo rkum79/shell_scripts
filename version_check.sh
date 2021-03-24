@@ -15,7 +15,7 @@ versionLabel=$major$var2$miner$var4$bug
 echo Current Version Name: $SVERSION
 echo Updated Version: $versionLabel
 
-BRANCH_NAME=${CI_REF_NAME}
+BRANCH_NAME=${GITHUB_REF_NAME}
 VERSION=$(mvn -Dexec.executable='echo' -Dexec.args='${project.version}' --non-recursive exec:exec -q |egrep -iwo SNAPSHOT)
 LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}')
 MergeCommit=`git log -1 |egrep -iwo Merge | tail -1`
