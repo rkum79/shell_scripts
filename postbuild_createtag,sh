@@ -6,6 +6,7 @@
 #######################################################################################
 
 BRANCH_NAME=${GITHUB_REF}
+REPO_URL=https://github.com/${GITHUB_REPOSITORY}.git
 VERSION=`xml2 < pom.xml  | grep /project/version= | sed 's/.*=//'`
 RIV_ID=${GITHUB_SHA}
 echo BRANCH NAME : ${BRANCH_NAME}
@@ -23,7 +24,8 @@ if [ "${BRANCH_NAME}" = "refs/heads/master" ];
        echo Tag is already available ${TAG_CHECK}
      else
        git tag -f -a ${VERSION} -m "AutoCreate : Tag Created with ${VERSION} Version" ${RIV_ID}
-       git push
+       git remote add central ${REPO_URL}
+       git push central ${VERSION}
      fi
   else
     In This "${BRANCH_NAME}" branch..  we dont need to create the Tag
