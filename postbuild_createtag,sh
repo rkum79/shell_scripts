@@ -1,0 +1,30 @@
+#!/bin/bash
+#######################################################################################
+# This script is for Mule APIs Down Merge from Master Branch Develop Branch           #
+# Author : Rajiv Kumar                                                                #
+# Reviewed By: DevOps Team                                                            #
+#######################################################################################
+
+BRANCH_NAME=${GITHUB_REF}
+VERSION=`xml2 < pom.xml  | grep /project/version= | sed 's/.*=//'`
+RIV_ID=${GITHUB_SHA}
+echo BRANCH NAME : ${BRANCH_NAME}
+echo VERSION Name :  ${VERSION}
+echo Code Revision ID : ${RIV_ID}
+
+if [ "${BRANCH_NAME}" = "master" ];
+  then
+    git config --global user.email "rajiv_kumar@waters.com"
+    git config --global user.name "conrkuma"
+    TAG_CHECK=`git tag -l |egrep -iwo ${VERSION}`
+    echo Tag Name if extist : ${TAG_CHECK}
+    if [ "${VERSION}" = "${TAG_CHECK}" ]
+     then
+       echo Tag is already available ${TAG_CHECK}
+     else
+       git tag -f -a ${VERSION} -m "AutoCreate : Tag Created with ${VERSION} Version" ${RIV_ID}
+       git push
+     fi
+  else
+    In This "${BRANCH_NAME}" branch..  we dont need to create the Tag
+fi
