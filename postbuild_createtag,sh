@@ -12,7 +12,7 @@ echo BRANCH NAME : ${BRANCH_NAME}
 echo VERSION Name :  ${VERSION}
 echo Code Revision ID : ${RIV_ID}
 
-if [ "${BRANCH_NAME}" = "master" ];
+if [ "${BRANCH_NAME}" = "refs/heads/master" ];
   then
     git config --global user.email "rajiv_kumar@waters.com"
     git config --global user.name "conrkuma"
