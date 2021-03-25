@@ -17,6 +17,7 @@ if [ "${BRANCH_NAME}" = "refs/heads/master" ];
   then
     git config --global user.email "rajiv_kumar@waters.com"
     git config --global user.name "conrkuma"
+    git fetch --tags
     TAG_CHECK=`git tag -l |egrep -iwo ${VERSION}`
     echo Tag Name if extist : ${TAG_CHECK}
     if [ "${VERSION}" = "${TAG_CHECK}" ]
