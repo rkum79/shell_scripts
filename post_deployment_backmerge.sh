@@ -5,7 +5,7 @@
 # Reviewed By: DevOps Team                                                            #
 #######################################################################################
 BRANCH_MASTER=refs/heads/master # Should be a build variable
-BRANCH_DEVELOP=develop # Should be a build variable
+BRANCH_DEVELOP=refs/heads/develop # Should be a build variable
 #Clone repository from Master Branch
 #git clone -b ${BRANCH_MASTER} ssh://bitbucketprod1.waters.com:7999/watms/${bamboo_maven_artifactId}.git
 #Change Directory to sourecode for API
