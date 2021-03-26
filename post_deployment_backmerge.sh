@@ -33,10 +33,8 @@ git config --global user.name "rkum79"
 git status
 git commit -a -m 'AutoCommit: updated pom version and downmerge into develop'
 #Checkout develop branch and merge version branch into develop branch
-git checkout ${BRANCH_DEVELOP}
+git checkout -b ${BRANCH_DEVELOP}
 git merge ${BRANCH_MASTER} --no-ff --no-edit
 #Push the changes in Develop Branch
 git push origin ${BRANCH_DEVELOP}
-#Change the dir the clean the workspace
-cd ..
-rm -rf ${bamboo_maven_artifactId}
+
