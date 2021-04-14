@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 #######################################################################################
 # This script is to check SNAPSHOT Availability and remove it from Master branch      #
 # Author : Rajiv Kumar                                                                #
