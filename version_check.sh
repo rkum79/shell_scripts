@@ -20,7 +20,7 @@ VERSION=$(mvn -Dexec.executable='echo' -Dexec.args='${project.version}' --non-re
 LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}')
 MergeCommit=`git log -1 |egrep -iwo Merge | tail -1`
 
-if [ "${BRANCH_NAME}" = "refs/heads/master" ];
+if [ "${BRANCH_NAME}" = "refs/heads/main" ];
   then
     if [ "${VERSION}" = "SNAPSHOT" ];
     then
