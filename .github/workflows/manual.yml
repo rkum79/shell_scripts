@@ -32,3 +32,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - uses: actions/checkout@v2      
+    - run: echo RepoName=${{ github.event.repository.name }}
