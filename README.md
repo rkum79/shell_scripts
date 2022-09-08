@@ -36,7 +36,7 @@ No modules.
 | <a name="input_client_resource_server"></a> [client\_resource\_server](#input\_client\_resource\_server) | n/a | `string` | `""` | no |
 | <a name="input_id_token_validity"></a> [id\_token\_validity](#input\_id\_token\_validity) | n/a | `string` | `""` | no |
 | <a name="input_id_token_validity_unit"></a> [id\_token\_validity\_unit](#input\_id\_token\_validity\_unit) | n/a | `string` | `""` | no |
-| <a name="input_provider_env_roles"></a> [provider\_env\_roles](#input\_provider\_env\_roles) | n/a | `map` | <pre>{<br>  "dev": "",<br>  "pre-prod": "arn:aws:iam::327711378138:role/terraform_role",<br>  "prod": "arn:aws:iam::204142478968:role/terraform_role",<br>  "stage": "arn:aws:iam::570400125078:role/terraform-role",<br>  "test": "arn:aws:iam::903879511348:role/terraform_role"<br>}</pre> | no |
+| <a name="input_provider_env_roles"></a> [provider\_env\_roles](#input\_provider\_env\_roles) | n/a | `map` | <pre>{<br>  ""<br>}</pre> | no |
 | <a name="input_refresh_token_validity"></a> [refresh\_token\_validity](#input\_refresh\_token\_validity) | n/a | `string` | `""` | no |
 | <a name="input_refresh_token_validity_unit"></a> [refresh\_token\_validity\_unit](#input\_refresh\_token\_validity\_unit) | n/a | `string` | `""` | no |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `""` | no |
