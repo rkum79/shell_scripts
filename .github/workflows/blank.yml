@@ -34,7 +34,7 @@ jobs:
           echo "CI_RUN_NUMBER=$CI_RUN_NUMBER"
           echo "CI_WORKFLOW=$CI_WORKFLOW"
           echo "CI_ACTION=$CI_ACTION"
-      - name: Print environment variables exposed by GitHub
+      - name: Print environment variables exposed by GitHub show
         run: |
           echo "GITHUB_ACTOR=$GITHUB_ACTOR"
           echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
