@@ -1,7 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: ITWEB MULE COMMON APIs PROD RELEASE
-
+name: PROD RELEASE
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 on:
   workflow_dispatch:
@@ -43,7 +42,7 @@ on:
       waters-esb-order-proc-api1:
         type: boolean
         description: waters-esb-order-proc-api1
- jobs:
+jobs:
   waters-products-sap-sys-api:
     if: github.event.inputs.waters-products-sap-sys-api=='true'
     runs-on: ubuntu-latest
