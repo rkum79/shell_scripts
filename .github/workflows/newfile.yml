@@ -42,6 +42,33 @@ on:
       waters-esb-order-proc-api1:
         type: boolean
         description: waters-esb-order-proc-api1
+      waters-products-sap-sys-api1:
+        type: boolean
+        description: waters-products-sap-sys-api    
+      waters-quote-proc-api1:
+        type: boolean
+        description: waters-quote-proc-api 
+      waters-quote-sap-sys-api1:
+        type: boolean
+        description: waters-quote-sap-sys-api
+      waters-account-sap-sys-api1:
+        type: boolean
+        description: waters-account-sap-sys-api   
+      waters-account-proc-api1:
+        type: boolean
+        description: waters-account-proc-api 
+      waters-esb-quote-proc-api11:
+        type: boolean
+        description: waters-esb-quote-proc-api
+      waters-esb-order-proc-api11:
+        type: boolean
+        description: waters-esb-order-proc-api 
+      waters-esb-quote-proc-api111:
+        type: boolean
+        description: waters-esb-quote-proc-api1
+      waters-esb-order-proc-api111:
+        type: boolean
+        description: waters-esb-order-proc-api1
 jobs:
   waters-products-sap-sys-api:
     if: github.event.inputs.waters-products-sap-sys-api=='true'
